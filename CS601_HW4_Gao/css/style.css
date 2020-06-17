@@ -1,0 +1,13 @@
+input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+input:invalid {
+  border: orange solid 3px;
+}

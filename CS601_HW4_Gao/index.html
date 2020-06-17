@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/js.js" defer></script>
+  </head>
+  <body>
+    <form
+      id="form"
+      onsubmit="return validateForm();"
+      action="http://bucs601.com/submit.php"
+      method="post"
+    >
+      <!-- Name part -->
+      <fieldset>
+        <legend>Shipping Address:</legend>
+        <label for="firstName">Enter yo ur first name</label><br />
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          pattern="[A-Za-z]{2,}"
+          title="A minimum length of two (2) characters"
+          required
+        />
+        <br />
+        <label for="lastName">Enter your last name</label><br />
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          pattern="[A-Za-z]{2,}"
+          title="A minimum length of two (2) characters"
+          required
+        />
+        <br />
+        <label for="facilitator">Enter your facilitator's first name</label
+        ><br />
+        <input
+          type="text"
+          name="facilitator"
+          id="facilitator"
+          pattern="[A-Za-z]{2,}"
+          title="Active facilitators for the course during this semester only"
+          required
+        />
+      </fieldset>
+      <!-- a group of radio buttons with your choice of options -->
+      <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" name="gender" id="male" checked />
+        <label for="male">Male </label>
+        <br />
+        <input type="radio" name="gender" id="female" />
+        <label for="female">Female</label>
+      </fieldset>
+      <!-- a group of check boxes with your choice of values -->
+      <fieldset>
+        <legend>I want to receive</legend>
+        <input type="checkbox" name="newsletter" id="check_1" />
+        <label for="check_1">The weekly newsletter</label>
+        <br />
+        <input type="checkbox" name="promotion" id="check_2" />
+        <label for="check_2">The monthly promotion</label>
+      </fieldset>
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
